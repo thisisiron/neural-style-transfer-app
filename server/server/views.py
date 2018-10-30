@@ -20,5 +20,9 @@ def handle_uploaded_file(f):
     for chunk in f.chunks(): 
         destination.write(chunk)
     destination.close()
+    transfer(fname)
     return fname
 
+def transfer(fname):
+    print(fname)
+    os.system('python neural_style_transfer.py --image ' + fname + ' --model models/eccv16/starry_night.t7')
