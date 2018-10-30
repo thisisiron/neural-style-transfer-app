@@ -1,3 +1,11 @@
 # Images Folder
 /images
 /server/media
+
+
+# Android
+/ArtistsFilter/.idea/libraries
+/ArtistsFilter/.idea/modules.xml
+/ArtistsFilter/.idea/workspace.xml
+/ArtistsFilter/.gradle
+/ArtistsFilter/local.properties
