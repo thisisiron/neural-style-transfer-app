@@ -50,13 +50,15 @@ print("[INFO] neural style transfer took {:.4f} seconds".format(
 	end - start))
 
 fname = re.findall(r'server/media/(.*).jpg', args['image'])[0]
-# show the images
-cv2.imshow("Input", image)
-cv2.imshow("Output", output)
+
+# show the images converted and original
+# cv2.imshow("Input", image)
+# cv2.imshow("Output", output)
+# while True:
+#     k = cv2.waitKey(0) & 0xFF
+#     if k == 27:         # wait for ESC key to exit
+#         cv2.destroyAllWindows()
+#         break
+
 output *= 255.0
 cv2.imwrite('./transfer/' + fname + '_transfer.jpg', output)
-while True:
-    k = cv2.waitKey(0) & 0xFF
-    if k == 27:         # wait for ESC key to exit
-        cv2.destroyAllWindows()
-        break
