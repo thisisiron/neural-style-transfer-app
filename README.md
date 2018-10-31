@@ -1,7 +1,7 @@
 # Neural style transfer App
-Convert images in the gallery into a flower that you learned by deep learning
+Convert images in the gallery into a flower that you learned by deep learning (Currently only Van Gogh available)
 
-갤러리에 있는 이미지를 딥러닝으로 학습시킨 화풍으로 변환
+갤러리에 있는 이미지를 딥러닝으로 학습시킨 화풍으로 변환 (현재 고흐만 가능)
 
 ## Demo
 ![](https://github.com/thisisiron/neural-style-transfer-app/blob/master/images/demo.gif)
@@ -15,4 +15,4 @@ cd server
 python manage.py runserver
 ```
 
-2. Build Android (ArtistsFilter dir)
+2. Build Android (Open ArtistsFilter dir in Android Studio)
