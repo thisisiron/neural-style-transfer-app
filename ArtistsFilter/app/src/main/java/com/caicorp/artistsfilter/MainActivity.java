@@ -9,6 +9,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.media.Image;
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -32,6 +33,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -143,6 +145,7 @@ public class MainActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
                     imageView.setImageBitmap(bitmap);//이미지 뷰에 비트맵 넣기
+
                     break;
 
                 default:
@@ -215,6 +218,15 @@ public class MainActivity extends AppCompatActivity {
 
                         }
                     });
+
+                    // Save image to gallery
+                    MediaStore.Images.Media.insertImage(
+                            getContentResolver(),
+                            transImage,
+                            fname + "_trans",
+                            "Image converted"
+                    );
+
                     checkResponse = "Success";
 
                 } else {
