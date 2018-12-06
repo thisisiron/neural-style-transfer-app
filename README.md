@@ -16,3 +16,6 @@ python manage.py runserver
 ```
 
 2. Build Android (Open ArtistsFilter dir in Android Studio)
+
+## Reference
+[Neural Style Transfer with OpenCV](https://www.pyimagesearch.com/2018/08/27/neural-style-transfer-with-opencv/#comment-484417)
